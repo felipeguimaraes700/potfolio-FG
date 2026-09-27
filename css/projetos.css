@@ -1,0 +1,58 @@
+#Project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: brown;
+    height: 100vh;
+    background-image: url(../img/projetos\ fundo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white ;
+}
+
+.container-projeto{
+    text-align: center;
+
+}
+
+.container-title-project{
+    text-align: left;
+    padding-left: 30px;
+}
+.container-title-project span{
+    font-size: 0.9rem;
+    color: #c49745;
+    border-bottom:1px solid #c49745;
+    padding-bottom: 20px;
+}
+.container-title-project h2{
+    font-size: 2.5rem;
+    margin: 20px 0px;
+}
+.container-title-project h2 span{
+    color: #c49745;
+}
+
+
+
+.container-box-projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-projeto .box-project{
+    width: 350px;
+    height: 250px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #c49745;
+    border-radius: 10px;
+    cursor: pointer;
+    background: url(../img/fundoembreve.png);
+    background-size: cover;
+    background-position: center;
+}

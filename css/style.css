@@ -1,0 +1,202 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+nav.scroll {
+    background-color: #00000063;
+    backdrop-filter: blur(6px);
+    transition: .3s linear;
+    border-bottom: 1px solid #c4984588;
+}
+nav img{
+    width: 70px;
+    margin-left: 30px;
+}
+
+.links-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    list-style: none;
+}
+.links-nav li a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    transition: .3s linear;
+    font-weight: bold;;
+}
+.links-nav li:not(:last-child) a {
+    margin-right: 100px;
+}
+.links-nav li a:hover{
+    color: #c49745;
+}
+
+/* link ativo */
+.links-nav li a.active {
+    color: #c49745;
+}
+/* sublinhado */
+.links-nav li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+
+    background-color: #c99732;
+}
+
+.container-button-nav{
+    margin-right: 30PX;
+}
+.container-button-nav BUTTON{
+    background-color: #7c7c7c00;
+    padding: 10px;
+    border-radius: 17px;
+    border: 1px solid #c49745;
+    color: #c49745;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.container-button-nav BUTTON:hover{
+    background-color: rgb(156, 128, 34);
+    color: white;
+}
+
+.container-menu{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+}
+.container-menu i{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.links-nav-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #857744f1;
+    width: 0%;
+    list-style: none;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+.links-nav-mobile li{
+    margin-bottom: 50px;
+}
+
+.links-nav-mobile li a{
+    text-decoration: none;
+    margin-right: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: .3s linear;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.links-nav-mobile li a:hover{
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.abrir{
+    display: none;
+}
+.fechar{
+    display: none;
+}
+
+.video-scroll {
+    position: relative;
+    height: 200vh;
+}
+
+.video-scroll .holder {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-scroll video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content-home{
+    position: absolute;
+     top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50vw;
+    color: white;
+}
+
+.content-home h1{
+    font-family: "Ephesis", cursive;
+    font-size: 7rem;
+    color: #c49745;
+}
+
+.subcontent-home{
+    width: 55%;
+}
+.subcontent-home .subcontent-home-title{
+    font-size: 1.7rem;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.container-button-home{
+    margin-top: 40px;
+}
+.container-button-home button{
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #c49745;
+    background-color: black;
+    color: #c49745;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.container-button-home button:hover{
+    background-color: rgb(156, 128, 34);
+    color: white;
+}
+

@@ -1,0 +1,113 @@
+
+
+.container-global-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.content-contact {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 200px;
+    box-sizing: border-box;
+    background-image: linear-gradient(TO right, BLACK, rgba(0, 0, 0, 0));
+}
+
+.content-contact h2{
+    font-size: 5.6rem;
+}
+.content-contact .text-contact{
+    width: 450px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.container-box-contact {
+    display: flex;
+    align-items: center ;
+    margin-top: 3px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.container-contact-icons a{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: .2s linear;
+}
+.container-contact-icons a:hover{
+    color: #c49745;
+    font-weight: bold;
+}
+.container-contact-icons i{
+    font-size: 1.5rem;
+    border: 1px solid #c49745;
+    color: #c49745;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.content-form {
+    position: relative;
+    width: 800px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 20px;
+    border: 1px solid #c49745;
+}
+
+.content-form form {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #c49745;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.747);
+    font-size: 1rem;
+    color: white;
+}
+
+form button {
+    background: linear-gradient(
+        to right,
+        rgb(255, 222, 151),
+        rgb(133, 94, 49)
+    );
+
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 13px;
+    font-size: 1rem;
+}
