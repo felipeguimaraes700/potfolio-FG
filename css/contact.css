@@ -23,7 +23,8 @@
 }
 
 .content-contact h2{
-    font-size: 5.6rem;
+    font-size: 3rem;
+    color: #c49745;
 }
 .content-contact .text-contact{
     width: 450px;
@@ -56,10 +57,12 @@
     padding: 10px;
 }
 
+/* formulário  ////////////////// */
+
 .content-form {
     position: relative;
-    width: 800px;
-    height: 700px;
+    width: 600px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +90,7 @@
 .form-group input,
 .form-group textarea {
     width: 100%;
+    height: 50px;
     box-sizing: border-box;
     border: 1px solid #c49745;
     padding: 15px;
