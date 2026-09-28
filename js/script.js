@@ -79,4 +79,4 @@ window.addEventListener("scroll", function () {
   });
 
   //animações das divs
-  AOS.init()
+    AOS.init();

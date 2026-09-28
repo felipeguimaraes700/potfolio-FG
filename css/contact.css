@@ -99,6 +99,9 @@
     font-size: 1rem;
     color: white;
 }
+.form-group textarea{
+    height: 70px;
+}
 
 form button {
     background: linear-gradient(

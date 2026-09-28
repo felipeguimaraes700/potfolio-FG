@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="img/logoFG.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/projetos.css">
@@ -121,12 +122,12 @@
                 <h2>Projetos <br><sapn>que conectam.</sapn></h2>
             </div>
             <div class="container-box-projects">
-                <div class="box-project"></div>
-                <div class="box-project"></div>
-                <div class="box-project"></div>
-                <div class="box-project"></div>
-                <div class="box-project"></div>
-                <div class="box-project"></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200" ></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200"></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200"></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200"></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1200"></div>
+                <div class="box-project" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200"></div>
             </div>
         </div>
     </section>
@@ -229,11 +230,15 @@
              </div>
         </div>
     </section>
-
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/navactive.js"></script>
         <script src="js/testeroll.js"></script>
         <script src="js/script.js"></script>
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
         <script src="js/form.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html> 
