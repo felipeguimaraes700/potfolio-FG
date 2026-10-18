@@ -1,58 +1,427 @@
-#Project{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: brown;
-    height: 100vh;
-    background-image: url(../img/projetos\ fundo.png);
-    background-attachment: fixed;
-    background-size: cover;
-    color: white ;
+#Project {
+  min-height: 100vh;
+  background-color: #6b3c18;
+  background-image: url("../img/projetos02.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+    z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
 }
 
-.container-projeto{
+/* Camada escura suave para contraste */
+#Project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.40),
+    rgba(0, 0, 0, 0.08) 65%,
+    rgba(0, 0, 0, 0.20)
+  );
+  pointer-events: none;
+}
+
+/* Layout principal */
+.container-projeto {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr)
+                         minmax(0, 1.5fr);
+  align-items: center;
+  gap: 45px;
+
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   TÍTULO
+================================ */
+
+.container-title-project {
+  text-align: left;
+  padding-left: 0;
+}
+
+.container-title-project .project-label {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: #e7bb73;
+  border-bottom: 1px solid #c49745;
+  padding-bottom: 12px;
+}
+
+.container-title-project h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 28px 0;
+  color: #f5c778;
+}
+
+.container-title-project h2 span {
+  font: inherit;
+  color: #fff0d6;
+  border: none;
+  padding: 0;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f1e3d0;
+  max-width: 360px;
+}
+
+
+/* ==============================
+   CARDS DOS PROJETOS
+================================ */
+
+.container-box-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  perspective: 1400px;
+}
+
+.box-project {
+  position: relative;
+
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 205px;
+  height: 340px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(230, 178, 90, 0.8);
+  border-radius: 7px;
+
+  background: #100c09;
+
+  box-shadow:
+    12px 20px 35px rgba(0, 0, 0, 0.55),
+    inset 0 0 15px rgba(218, 164, 70, 0.08);
+
+  transform: rotateY(-15deg) translateY(-10px);
+  transform-origin: center;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+/* Imagem */
+
+.project-image {
+  position: relative;
+
+  flex: 1 1 auto;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle at 50% 45%,
+    #60401e 0%,
+    #24180e 42%,
+    #080706 100%
+  );
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 130, 0.10),
+    transparent 50%,
+    rgba(0, 0, 0, 0.45)
+  );
+
+  pointer-events: none;
+}
+
+.project-symbol {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  color: #d4a052;
+
+  text-shadow: 0 0 30px rgba(212, 160, 82, 0.35);
+
+  transition: transform 0.45s ease;
+}
+
+/* ==============================
+   RODAPÉ EXPANSÍVEL
+================================ */
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 78px;
+
+  box-sizing: border-box;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: linear-gradient(
+    180deg,
+    rgba(32, 22, 14, 0.98),
+    #090706
+  );
+
+  border-top: 1px solid rgba(196, 151, 69, 0.25);
+
+  z-index: 2;
+  overflow: hidden;
+
+  transition: height 0.3s linear;
+}
+
+.project-info small {
+  flex-shrink: 0;
+
+  color: #c49745;
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+}
+
+/* Título e seta */
+
+.project-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+
+  min-width: 0;
+  margin-top: 8px;
+}
+
+.project-bottom h3 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.2;
+
+  color: #f4e1c3;
+  overflow-wrap: anywhere;
+}
+
+.project-arrow {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #c49745;
+  border-radius: 50%;
+
+  color: #d8ad66;
+
+  transition: transform 0.35s ease;
+}
+
+/* Descrição */
+
+.project-description-card {
+  margin: 14px 0 4px;
+
+  color: #e4d1b5;
+  font-size: 0.76rem;
+  line-height: 1.6;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
+}
+
+/* ==============================
+   INTERAÇÃO INDIVIDUAL
+================================ */
+
+.box-project:hover {
+  transform: rotateY(0deg) translateY(-10px) scale(1.04);
+
+  z-index: 5;
+  border-color: #ffdb91;
+
+  box-shadow:
+    0 28px 45px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(212, 157, 65, 0.3);
+}
+
+.box-project:hover .project-info {
+  height: 78%;
+  overflow-y: auto;
+}
+
+.box-project:hover .project-description-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.box-project:hover .project-arrow {
+  transform: rotate(45deg);
+}
+
+.box-project:hover .project-symbol {
+  transform: scale(1.08);
+}
+
+/* Acessibilidade por teclado */
+
+.box-project:focus-within .project-info {
+  height: 78%;
+  overflow-y: auto;
+}
+
+.box-project:focus-within .project-description-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Barra de rolagem discreta */
+
+.project-info {
+  scrollbar-width: thin;
+  scrollbar-color: #8f6935 transparent;
+}
+
+.project-info::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-info::-webkit-scrollbar-thumb {
+  background: #8f6935;
+  border-radius: 10px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 1100px) {
+  .container-projeto {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .container-title-project {
     text-align: center;
+  }
 
-}
-
-.container-title-project{
-    text-align: left;
-    padding-left: 30px;
-}
-.container-title-project span{
-    font-size: 0.9rem;
-    color: #c49745;
-    border-bottom:1px solid #c49745;
-    padding-bottom: 20px;
-}
-.container-title-project h2{
-    font-size: 2.5rem;
-    margin: 20px 0px;
-}
-.container-title-project h2 span{
-    color: #c49745;
-}
-
-
-
-.container-box-projects{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    width: 100%;
-    max-width: 1200px;
+  .project-description {
     margin: 0 auto;
+  }
+
+  .container-box-projects {
+    max-width: 800px;
+  }
 }
 
-.container-projeto .box-project{
-    width: 280px;
-    height: 180px;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid #c49745;
-    border-radius: 10px;
-    cursor: pointer;
-    background: url(../img/fundoembreve.png);
-    background-size: cover;
-    background-position: center;
+@media (max-width: 650px) {
+  #Project {
+    padding: 100px 20px 70px;
+    background-attachment: scroll;
+  }
+
+  .container-title-project h2 {
+    font-size: 2.8rem;
+  }
+
+  .container-box-projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    perspective: none;
+  }
+
+  .box-project {
+    width: 100%;
+    max-width: none;
+    height: 260px;
+
+    transform: none;
+  }
+
+  .box-project:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-bottom h3 {
+    font-size: 0.85rem;
+  }
+
+  .project-description-card {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .box-project:hover .project-info,
+  .box-project:focus-within .project-info {
+    height: 82%;
+  }
+}
+
+/* Movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  .box-project,
+  .project-info,
+  .project-description-card,
+  .project-arrow,
+  .project-symbol {
+    transition: none;
+  }
 }

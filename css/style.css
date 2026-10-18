@@ -16,7 +16,7 @@ nav{
     top: 0;
     width: 100%;
     height: 80px;
-    z-index: 1;
+    z-index: 999;
 }
 nav.scroll {
     background-color: #00000063;
