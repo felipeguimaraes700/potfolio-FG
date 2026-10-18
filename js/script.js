@@ -1,33 +1,24 @@
-function openNav(){
-    document.querySelector(".abrir").style.display = "none";
-    document.querySelector(".fechar").style.display = "block";
-    document.querySelector(".links-nav-mobile").style.width = "50%";
+function toggleNav() {
+    const menu = document.querySelector('.links-nav-mobile');
+    const button = document.querySelector('.container-menu');
+
+    menu.classList.toggle('active');
+    button.classList.toggle('active');
+
+    const isOpen = menu.classList.contains('active');
+
+    button.setAttribute('aria-expanded', isOpen);
 }
 
-function closeNav(){
-    document.querySelector(".abrir").style.display = "block";
-    document.querySelector(".fechar").style.display = "none";
-    document.querySelector(".links-nav-mobile").style.width = "0%";
+function closeNav() {
+    const menu = document.querySelector('.links-nav-mobile');
+    const button = document.querySelector('.container-menu');
+
+    menu.classList.remove('active');
+    button.classList.remove('active');
+
+    button.setAttribute('aria-expanded', 'false');
 }
-
-document.addEventListener("click", function(event) {
-    const menu = document.querySelector(".links-nav-mobile");
-    const abrirBtn = document.querySelector(".abrir");
-    const fecharBtn = document.querySelector(".fechar");
-
-    // Verifica se o menu está visível
-    const menuAberto = menu.style.width !== "0%" && window.innerWidth <= 800;
-
-    // Se o menu está aberto e o clique foi fora dele e fora dos ícones
-    if (
-        menuAberto &&
-        !menu.contains(event.target) &&
-        !abrirBtn.contains(event.target) &&
-        !fecharBtn.contains(event.target)
-    ) {
-        closeNav(); // Fecha o menu
-    }
-});
 
 //texto animado home-page
 const textos = [

@@ -1,324 +1,338 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="img/logoFG.png" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/about.css">
-        <link rel="stylesheet" href="css/projetos.css">
-        <link rel="stylesheet" href="css/contact.css">
-    
-    </head>
-    <body>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title></title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="shortcut icon" href="img/logoFG.png" type="image/x-icon">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/about.css">
+            <link rel="stylesheet" href="css/projetos.css">
+            <link rel="stylesheet" href="css/contact.css">
+        
+        </head>
+        <body>
         <section id="navigation">
-            <nav>
-                <a href="#Home"><img src="img/logoFG.png" alt=""></a>
-                <ul class="links-nav">
-                    <li class="link-nav"><a href="#Home">HOME</a></li>
-                    <li class="link-nav"><a href="#Sobre">SOBRE</a></li>
-                    <li class="link-nav"><a href="#Project">PROJETOS</a></li>
-                    <li class="link-nav"><a href="#Contact">CONTATO</a></li>
-                </ul>
-            
-                <ul class="links-nav-mobile">
-                    <li class="link-nav"><a href="#home">HOME</a></li>
-                    <li class="link-nav"><a href="#sobre">SOBRE</a></li>
-                    <li class="link-nav"><a href="#Projetos">PROJETOS</a></li>
-                    <li class="link-nav"><a href="#Contact">CONTATO</a></li>
-                </ul>
-            
-                <div class="container-menu">
-                    <i class="fas fa-bars abrir" onclick="openNav()"></i>
-                    <i class="fas fa-times fechar" onclick="closeNav()"></i>
-                </div>
+    <nav>
+        <a href="#Home" class="logo-nav">
+        <img src="img/logoFG.png" alt="Logo FG">
+        </a>
 
-                <div class="container-button-nav">
-                    <a href="#Contact"><button>VAMOS CONVERSAR</button></a>
-                </div>
-            </nav>
-        </section>
-    
-    
-    <!-------------------------- HOME -------------------->
+        <!-- Menu desktop -->
+        <ul class="links-nav">
+        <li class="link-nav"><a href="#Home">HOME</a></li>
+        <li class="link-nav"><a href="#Sobre">SOBRE</a></li>
+        <li class="link-nav"><a href="#Project">PROJETOS</a></li>
+        <li class="link-nav"><a href="#Contact">CONTATO</a></li>
+        </ul>
+
+        <!-- Botão de conversa -->
+        <div class="container-button-nav">
+            <a href="#Contact"><button type="button">VAMOS CONVERSAR</button></a>
+        </div>
+
+        <!-- Botão do menu mobile -->
+        <button class="container-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile" onclick="toggleNav()">
+            <i class="fas fa-bars abrir"></i>
+            <i class="fas fa-times fechar"></i>
+        </button> 
+
+        <!-- Fundo escuro do menu -->
+        <div class="menu-overlay" onclick="closeNav()" aria-hidden="true"></div>
+
+        <!-- Menu mobile -->
+        <ul class="links-nav-mobile" id="menu-mobile">
+        <li><a href="#Home" onclick="closeNav()">HOME</a></li>
+        <li><a href="#Sobre" onclick="closeNav()">SOBRE</a></li>
+        <li><a href="#Project" onclick="closeNav()">PROJETOS</a></li>
+        <li><a href="#Contact" onclick="closeNav()">CONTATO</a></li>
+
+        <li class="mobile-contact">
+            <a href="#Contact" onclick="closeNav()">VAMOS CONVERSAR ↗</a>
+        </li>
+        </ul>
+    </nav>
+    </section>
         
-        <section class="video-scroll" id="Home">
+        
+        <!-------------------------- HOME -------------------->
+            
+            <section class="video-scroll" id="Home">
+                <div class="holder">
+                    <video src="video/homeHD.mp4" preload="auto" muted playsinline></video>
+
+                    <div class="content-home">
+                        <div class="container-eyebrow">
+                            ESTRATÉGIA | DESING | POSICIONAMENTO
+                        </div>
+                        <h1>Felipe Guimarães</h1>
+                        <div class="subcontent-home">
+                            <p class="subcontent-home-title">Transformando ideias em histórias que geram conexão.</p>
+                            
+                            <p>
+                                Identidade visual, identidade de marca, sites e automações que fortalecem negócios e criam presença real no digital.
+                            </p>
+                        </div>
+                        <div class="container-button-home">
+                            <a href="#Project"><button>Conheça meus projetos</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        <!-------------------------- SOBRE -------------------->
+
+        <section class="video-scroll" id="Sobre">
             <div class="holder">
-                <video src="video/homeHD.mp4" preload="auto" muted playsinline></video>
+                <video src="video/sobreHD02.mp4" preload="auto" muted playsinline></video>
 
-                <div class="content-home">
-                    <div class="container-eyebrow">
-                        ESTRATÉGIA | DESING | POSICIONAMENTO
-                    </div>
-                    <h1>Felipe Guimarães</h1>
-                    <div class="subcontent-home">
-                        <p class="subcontent-home-title">Transformando ideias em histórias que geram conexão.</p>
+                <div class="container-about-text-left">
+                    <span>MINHA VISÃO</span>
+                    <H2>Muito além do design</H2>
+                    <span>estratégia que conecta</span>
+                    <p>Acredito que uma marca forte vai muito além da estética. Ela precisa <strong>comunicar com clareza, transmitir confiança e criar conexões reais com seu público.</strong> Por isso, uno design, estratégia e tecnologia para transformar ideias em experiências digitais que valorizam marcas e geram resultados.</p> 
+                </div>
+                <div class="container-about-text-right">
+                    <span>POR TRÁS DOS PROJETOS</span>
+                    <H2>Prazer, sou Felipe Guimarães.</H2>
+                    <p>Transformo desafios em soluções que fazem sentido. Cada projeto é uma oportunidade de entender uma necessidade, encontrar novas possibilidades e construir experiências digitais que unem criatividade, estratégia e tecnologia para gerar valor de verdade.</p>
+                </div>
+            </div>
+
+            
+        </section>
+        
+        <!-------------------------- projetos -------------------->
+
+        
+    <section id="Project">
+    <div class="container-projeto">
+
+        <div class="container-title-project"> 
+        <span class="project-label">PORTFÓLIO / PROJETOS</span>
+
+        <h2>
+            Projetos <br>
+            <span>que conectam.</span>
+        </h2>
+
+        <p class="project-description">
+            Estratégia, design e posicionamento para
+            ideias que geram presença, conexão e
+            resultados reais.
+        </p>
+        </div>
+
+        <div class="container-box-projects">
+
+        <!-- CARD 01 -->
+        <div class="box-project">
+            <div class="project-image">
+            <span class="project-symbol"></span>
+            </div>
+
+            <div class="project-info">
+            <small>01 — PROJETO</small>
+
+            <div class="project-bottom">
+                <h3>Nome do projeto</h3>
+                <span class="project-arrow">↗</span>
+            </div>
+
+            <p class="project-description-card">
+                Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Consectetur expedita
+                dolores asperiores reiciendis accusantium
+                aut aspernatur accusamus, magni eos modi
+                nulla? Corporis excepturi libero error,
+                dolore rem nemo iste facilis!
+            </p>
+            </div>
+        </div>
+
+        <!-- CARD 02 -->
+        <div class="box-project">
+            <div class="project-image">
+            <span class="project-symbol"></span>
+            </div>
+
+            <div class="project-info">
+            <small>02 — PROJETO</small>
+
+            <div class="project-bottom">
+                <h3>Nome do projeto</h3>
+                <span class="project-arrow">↗</span>
+            </div>
+
+            <p class="project-description-card">
+                Descreva aqui o segundo projeto, suas
+                estratégias, os objetivos desenvolvidos
+                e os resultados alcançados.
+            </p>
+            </div>
+        </div>
+
+        <!-- CARD 03 -->
+        <div class="box-project">
+            <div class="project-image">
+            <span class="project-symbol"></span>
+            </div>
+
+            <div class="project-info">
+            <small>03 — PROJETO</small>
+
+            <div class="project-bottom">
+                <h3>Nome do projeto</h3>
+                <span class="project-arrow">↗</span>
+            </div>
+
+            <p class="project-description-card">
+                Apresente os detalhes do terceiro projeto,
+                explicando o conceito, o processo criativo
+                e os diferenciais da solução.
+            </p>
+            </div>
+        </div>
+
+        <!-- CARD 04 -->
+        <div class="box-project">
+            <div class="project-image">
+            <span class="project-symbol"></span>
+            </div>
+
+            <div class="project-info">
+            <small>04 — PROJETO</small>
+
+            <div class="project-bottom">
+                <h3>Nome do projeto</h3>
+                <span class="project-arrow">↗</span>
+            </div>
+
+            <p class="project-description-card">
+                Conte aqui a história do quarto projeto,
+                destacando sua proposta, identidade e
+                os resultados que ele pretende gerar.
+            </p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+        <!-------------------------- CONTATO -------------------->
+
+        <section class="video-scroll" id="Contact">
+            <div class="holder">
+                <video src="video/fundocontact.mp4" preload="auto" muted playsinline></video>
+
+                <div class="container-global-contact">
+                    <div class="content-contact">
+                        <span>CONTATO</span>
+                        <h2>Vamos</h2>
+                        <h2>Conversar?</h2>
+                        <p class="text-contact">Seja para desenvolver uma nova solução, firmar uma parceria estratégica ou discutir novas ideias para o seu negócio, estou à disposição para conversar.</p>
                         
-                        <p>
-                            Identidade visual, identidade de marca, sites e automações que fortalecem negócios e criam presença real no digital.
-                        </p>
+                            <div class="container-contact-icons">
+                                <div class="container-box-contact">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <a href="https://wa.me/5511910837324?text=Oi!%20Quero%20melhorar%20o%20posicionamento%20da%20minha%20marca%20e%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho." target="_blank">
+                                        <p>(11)91083-7324</p>
+                                    </a>
+                                </div>
+
+                                <div class="container-box-contact">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <a href="https://www.instagram.com/felipeguimaraes.tech/" target="_blank">
+                                        <p>@felipe.guima.ofc</p>
+                                    </a>
+                                </div>
+
+                                <div class="container-box-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="" target="_blank">
+                                        <p>felipeguima.dev@gmail.com</p>
+                                    </a>
+                                </div>
+                            </div>
                     </div>
-                    <div class="container-button-home">
-                        <a href="#Project"><button>Conheça meus projetos</button></a>
+
+                    <!----------------------- FORMULARIO ------------------------>
+
+                    <div class="content-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nome">NOME</label>
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Seu nome"
+                                    required
+                                >
+                            </div>
+                        
+                        
+                            <div class="form-group">
+                                <label for="email">E-MAIL</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="seuemail@gmail.com"
+                                    required
+                                >
+                            </div>
+                        
+                        
+                            <div class="form-group">
+                                <label for="telefone">TELEFONE</label>
+                                <input
+                                    type="text"
+                                    id="telefone"
+                                    name="telefone"
+                                    placeholder="(99) 99999-9999"
+                                    required
+                                >
+                            </div>
+                        
+                        
+                            <div class="form-group">
+                                <label for="mensagem">MENSAGEM</label>
+                                <textarea
+                                    id="mensagem"
+                                    name="mensagem"
+                                    placeholder="Conte um pouco sobre seu projeto..."
+                                    rows="5"
+                                    required 
+                                ></textarea>
+                            </div>
+                        
+                        
+                            <button type="submit">
+                                Enviar mensagem
+                            </button>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-
-
-    <!-------------------------- SOBRE -------------------->
-
-    <section class="video-scroll" id="Sobre">
-        <div class="holder">
-            <video src="video/sobreHD02.mp4" preload="auto" muted playsinline></video>
-
-            <div class="container-about-text-left">
-                <span>MINHA VISÃO</span>
-                <H2>Muito além do design</H2>
-                <span>estratégia que conecta</span>
-                <p>Acredito que uma marca forte vai muito além da estética. Ela precisa <strong>comunicar com clareza, transmitir confiança e criar conexões reais com seu público.</strong> Por isso, uno design, estratégia e tecnologia para transformar ideias em experiências digitais que valorizam marcas e geram resultados.</p> 
-            </div>
-            <div class="container-about-text-right">
-                <span>POR TRÁS DOS PROJETOS</span>
-                <H2>Prazer, sou Felipe Guimarães.</H2>
-                <p>Transformo desafios em soluções que fazem sentido. Cada projeto é uma oportunidade de entender uma necessidade, encontrar novas possibilidades e construir experiências digitais que unem criatividade, estratégia e tecnologia para gerar valor de verdade.</p>
-            </div>
-        </div>
-
         
-    </section>
-    
-    <!-------------------------- projetos -------------------->
-
-    
-<section id="Project">
-  <div class="container-projeto">
-
-    <div class="container-title-project">
-      <span class="project-label">PORTFÓLIO / PROJETOS</span>
-
-      <h2>
-        Projetos <br>
-        <span>que conectam.</span>
-      </h2>
-
-      <p class="project-description">
-        Estratégia, design e posicionamento para
-        ideias que geram presença, conexão e
-        resultados reais.
-      </p>
-    </div>
-
-    <div class="container-box-projects">
-
-      <!-- CARD 01 -->
-      <div class="box-project">
-        <div class="project-image">
-          <span class="project-symbol"></span>
-        </div>
-
-        <div class="project-info">
-          <small>01 — PROJETO</small>
-
-          <div class="project-bottom">
-            <h3>Nome do projeto</h3>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <p class="project-description-card">
-            Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Consectetur expedita
-            dolores asperiores reiciendis accusantium
-            aut aspernatur accusamus, magni eos modi
-            nulla? Corporis excepturi libero error,
-            dolore rem nemo iste facilis!
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 02 -->
-      <div class="box-project">
-        <div class="project-image">
-          <span class="project-symbol"></span>
-        </div>
-
-        <div class="project-info">
-          <small>02 — PROJETO</small>
-
-          <div class="project-bottom">
-            <h3>Nome do projeto</h3>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <p class="project-description-card">
-            Descreva aqui o segundo projeto, suas
-            estratégias, os objetivos desenvolvidos
-            e os resultados alcançados.
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 03 -->
-      <div class="box-project">
-        <div class="project-image">
-          <span class="project-symbol"></span>
-        </div>
-
-        <div class="project-info">
-          <small>03 — PROJETO</small>
-
-          <div class="project-bottom">
-            <h3>Nome do projeto</h3>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <p class="project-description-card">
-            Apresente os detalhes do terceiro projeto,
-            explicando o conceito, o processo criativo
-            e os diferenciais da solução.
-          </p>
-        </div>
-      </div>
-
-      <!-- CARD 04 -->
-      <div class="box-project">
-        <div class="project-image">
-          <span class="project-symbol"></span>
-        </div>
-
-        <div class="project-info">
-          <small>04 — PROJETO</small>
-
-          <div class="project-bottom">
-            <h3>Nome do projeto</h3>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <p class="project-description-card">
-            Conte aqui a história do quarto projeto,
-            destacando sua proposta, identidade e
-            os resultados que ele pretende gerar.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-------------------------- CONTATO -------------------->
-
-    <section class="video-scroll" id="Contact">
-        <div class="holder">
-             <video src="video/fundocontact.mp4" preload="auto" muted playsinline></video>
-
-             <div class="container-global-contact">
-                <div class="content-contact">
-                    <span>CONTATO</span>
-                    <h2>Vamos</h2>
-                    <h2>Conversar?</h2>
-                    <p class="text-contact">Seja para desenvolver uma nova solução, firmar uma parceria estratégica ou discutir novas ideias para o seu negócio, estou à disposição para conversar.</p>
-                    
-                        <div class="container-contact-icons">
-                            <div class="container-box-contact">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5511910837324?text=Oi!%20Quero%20melhorar%20o%20posicionamento%20da%20minha%20marca%20e%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho." target="_blank">
-                                    <p>(11)91083-7324</p>
-                                </a>
-                            </div>
-
-                            <div class="container-box-contact">
-                                <i class="fa-brands fa-instagram"></i>
-                                <a href="https://www.instagram.com/felipeguimaraes.tech/" target="_blank">
-                                    <p>@felipe.guima.ofc</p>
-                                </a>
-                            </div>
-
-                            <div class="container-box-contact">
-                                <i class="fas fa-envelope"></i>
-                                <a href="" target="_blank">
-                                    <p>felipeguima.dev@gmail.com</p>
-                                </a>
-                            </div>
-                        </div>
-                </div>
-
-                <!----------------------- FORMULARIO ------------------------>
-
-                <div class="content-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="nome">NOME</label>
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                placeholder="Seu nome"
-                                required
-                            >
-                        </div>
-                    
-                    
-                        <div class="form-group">
-                            <label for="email">E-MAIL</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="seuemail@gmail.com"
-                                required
-                            >
-                        </div>
-                    
-                    
-                        <div class="form-group">
-                            <label for="telefone">TELEFONE</label>
-                            <input
-                                type="text"
-                                id="telefone"
-                                name="telefone"
-                                placeholder="(99) 99999-9999"
-                                required
-                            >
-                        </div>
-                    
-                    
-                        <div class="form-group">
-                            <label for="mensagem">MENSAGEM</label>
-                            <textarea
-                                id="mensagem"
-                                name="mensagem"
-                                placeholder="Conte um pouco sobre seu projeto..."
-                                rows="5"
-                                required
-                            ></textarea>
-                        </div>
-                    
-                    
-                        <button type="submit">
-                            Enviar mensagem
-                        </button>
-
-                    </form>
-                </div>
-             </div>
-        </div>
-    </section>
-    
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="js/navactive.js"></script>
-        <script src="js/testeroll.js"></script>
-        <script src="js/script.js"></script>
-        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-        <script src="js/form.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
-</html> 
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="js/navactive.js"></script>
+            <script src="js/testeroll.js"></script>
+            <script src="js/script.js"></script>
+            <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+            <script src="js/form.js"></script>
+            <script>
+                AOS.init();
+            </script>
+        </body>
+    </html> 
