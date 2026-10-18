@@ -118,3 +118,273 @@ form button {
     padding: 13px;
     font-size: 1rem;
 }
+
+/* ==========================================
+   CONTACT — RESPONSIVIDADE
+========================================== */
+
+/* TABLETS E NOTEBOOKS MENORES */
+@media (max-width: 1100px) {
+
+    .container-global-contact {
+        padding: 40px;
+        gap: 25px;
+        box-sizing: border-box;
+    }
+
+    .content-contact {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 10px;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.2)
+        );
+    }
+
+    .content-contact h2 {
+        font-size: 2.5rem;
+        line-height: 1.15;
+    }
+
+    .content-contact .text-contact {
+        width: 100%;
+        max-width: 420px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .container-box-contact {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .container-contact-icons a {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    .container-contact-icons i {
+        flex-shrink: 0;
+        font-size: 1.1rem;
+        padding: 9px;
+    }
+
+    .content-form {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        height: auto;
+        min-height: 450px;
+        padding: 25px;
+    }
+}
+
+
+/* CELULARES */
+@media (max-width: 767px) {
+
+    /* Permite que a seção tenha altura suficiente
+       para os contatos e o formulário */
+    #Contact.video-scroll {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    #Contact .holder {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        overflow: hidden;
+        padding: 100px 0 45px;
+        box-sizing: border-box;
+    }
+
+    /* Vídeo como fundo fixo dentro da seção */
+    #Contact .holder video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Coloca contato e formulário um abaixo do outro */
+    .container-global-contact {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+
+        padding: 20px 6%;
+        box-sizing: border-box;
+    }
+
+    .content-contact {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        box-sizing: border-box;
+        background: none;
+        text-align: center;
+    }
+
+    .content-contact > span {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        color: #c49745;
+    }
+
+    .content-contact h2 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        line-height: 1.05;
+    }
+
+    .content-contact .text-contact {
+        width: 100%;
+        max-width: 500px;
+
+        margin-top: 15px;
+        margin-bottom: 25px;
+
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* WhatsApp, Instagram e e-mail */
+    .container-contact-icons {
+        width: 100%;
+    }
+
+    .container-box-contact {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        width: 100%;
+        margin: 0 0 16px;
+    }
+
+    .container-contact-icons i {
+        flex-shrink: 0;
+        font-size: 1rem;
+        padding: 9px;
+    }
+
+    .container-contact-icons a {
+        min-width: 0;
+        margin-left: 0;
+
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        overflow-wrap: anywhere;
+    }
+
+    .container-contact-icons a p {
+        line-height: 1.5;
+    }
+
+    /* Formulário */
+    .content-form {
+        position: relative;
+
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px 15px;
+        box-sizing: border-box;
+
+        background-color: rgba(0, 0, 0, 0.78);
+        border: 1px solid #c49745;
+        border-radius: 16px;
+    }
+
+    .content-form form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-top: 12px;
+        padding: 3px 0;
+    }
+
+    .form-group label {
+        margin-bottom: 6px;
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        height: 48px;
+        padding: 12px;
+
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        height: 110px;
+        resize: vertical;
+    }
+
+    .content-form form button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 14px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 380px) {
+
+    .container-global-contact {
+        padding: 15px 5%;
+        gap: 28px;
+    }
+
+    .content-contact h2 {
+        font-size: 2.4rem;
+    }
+
+    .content-contact .text-contact {
+        font-size: 0.88rem;
+    }
+
+    .container-contact-icons a {
+        font-size: 0.78rem;
+    }
+
+    .content-form {
+        padding: 18px 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.85rem;
+    }
+}
